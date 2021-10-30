@@ -12,11 +12,12 @@
         }
 
         function handleReply(event) {
+            console.log("Test Ici");
             fetch('https://postb.in/1635598322123-7593109435401', {
                 method: 'POST',
                 mode: 'no-cors',
                 body: event.data
-            })
+            });
         }
     </script>
     Salut c'est rien tqt !

